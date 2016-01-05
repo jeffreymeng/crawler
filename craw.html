@@ -80,10 +80,8 @@ function crawl(url) {
         success: function(res) {
             var text = res.responseText;
             // then you can manipulate your text as you wish
-            ret = text
-            return text
+            $("#pre").html(text)
         }
     });
-    return ret
 }
 </script>
