@@ -3,6 +3,7 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
 <script type="text/javascript">
+$("#pre").html(crawl("https://www.cnn.com"));
 function crawl(url) {
     // jquery.xdomainajax.js  ------ from padolsey
     var your_url = url;
