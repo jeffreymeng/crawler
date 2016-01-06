@@ -1,6 +1,6 @@
 
 <pre id="out"></pre>
-
+<pre id="out2"></pre>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
 <script type="text/javascript">
 $("#pre").html(crawl("http://www.cnn.com"));
@@ -79,8 +79,11 @@ function crawl(url) {
         type: 'GET',
         success: function(res) {
             var text = res.responseText;
+            $('#out').html(text.search('class="'));
+
             // then you can manipulate your text as you wish
-            $("#pre").html(text)
+            $("#out2").html(text)
+            console.log(text)
         }
     });
 }
